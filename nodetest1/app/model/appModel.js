@@ -1,7 +1,7 @@
 'user strict';
 var sql = require('./db.js');
 
-//Task object constructor
+//User object constructor
 var User = function(user){
     this.user = user.user;
     this.status = user.status;
@@ -39,7 +39,7 @@ User.getAllUsers = function getAllUsers(result) {
                     console.log("error: ", err);
                     result(null, err);
                 }
-                else{
+                // else{
                   console.log('users : ', res);  
 
                  result(null, res);
