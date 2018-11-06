@@ -2,7 +2,7 @@
 module.exports = function(app) {
   var user_account = require('../controllers/user_account');
 
-  // todoList Routes
+  
   app.route('/login')
     .get(user_account.list_all_users)
     .post(user_account.create_user);
