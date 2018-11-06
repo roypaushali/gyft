@@ -47,7 +47,7 @@ User.getAllUsers = function getAllUsers(result) {
             });   
 };
 User.updateById = function(id, user, result){
-  sql.query("UPDATE user_account SET user = ? WHERE user_account_id = ?", [task.user, id], function (err, res) {
+  sql.query("UPDATE user_account SET user = ? WHERE user_account_id = ?", [user.user, id], function (err, res) {
           if(err) {
               console.log("error: ", err);
                 result(null, err);
